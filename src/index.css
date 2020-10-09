@@ -1,3 +1,12 @@
+:root {
+  --base-font-size: 16px;
+}
+@media only screen and (max-width: 599px) {
+  :root {
+    --base-font-size: 8px;
+  }
+}
+
 body {
   margin: 0;
   background-image: url(./assets/background.jpg);
@@ -10,34 +19,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
-    background-image: url(./assets/background-600px.jpg);
-  }
-}
-@media only screen and (max-width: 768px) {
-  body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
-    background-image: url(./assets/background-768px.jpg);
-  }
-}
-@media only screen and (max-width: 992px) {
-  body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
-    background-image: url(./assets/background-992px.jpg);
-  }
-}
-@media only screen and (max-width: 1200px) {
-  body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
-    background-image: url(./assets/background-1200px.jpg);
-  }
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
