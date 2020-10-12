@@ -1,0 +1,47 @@
+nav {
+  background-color: #282c34;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 6vh;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+}
+nav .link {
+  transition: color 1s ease-out;
+  font-weight: bold;
+  font-size: var(--base-font-size);
+}
+nav .link:hover {
+  color: #00FFFF;
+}
+nav .custom-logo {
+  width: 40px;
+}
+nav #App-logo {
+  height: auto;
+  width: 40px;
+}
+nav #Apply-link {
+  justify-self: center;
+}
+nav a {
+  display: flex;
+  margin: 0 8px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav div .logo-link {
+  height: 20px;
+  width: 20px;
+}
+nav div .WoW-logo {
+  height: 20px;
+  width: 20px;
+}
