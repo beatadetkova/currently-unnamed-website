@@ -1,0 +1,7 @@
+.Article {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 100px;
+}
