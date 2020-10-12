@@ -1,0 +1,30 @@
+.guild-name {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  margin: 20px 550px;
+}
+.guild-name h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+.guild-name h2 {
+  font-size: 13px;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 100px 100px;
+}
+section p {
+  color: white;
+}
+
+ul {
+  padding-left: 15px;
+}
