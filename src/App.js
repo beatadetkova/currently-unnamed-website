@@ -1,41 +1,16 @@
 import React from 'react';
 import './App.css';
+import NavBar from './components/NavBar/NavBar.js';
+import Intro from './components/Intro/Intro.js';
+import Article from './components/Article/Article.js';
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <a
-          id="wowprogress"
-          href="https://www.wowprogress.com/guild/eu/tarren-mill/Currently+Unnamed"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WoWProgress
-        </a>
-        <a
-          href="https://raider.io/guilds/eu/tarren-mill/Currently%20Unnamed"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://cdnassets.raider.io/images/brand/Mark_2ColorWhite.svg"
-            alt="RaiderIO icon"
-          />
-        </a>
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </nav>
+      <NavBar />
+      <Intro />
+      <Article video="https://www.youtube.com/embed/Vdre3Tx10MA" />
+      <Article video="https://www.youtube.com/embed/HlCWhtmQPvo" />
     </div>
   );
 }
