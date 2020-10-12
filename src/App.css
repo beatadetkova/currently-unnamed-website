@@ -26,3 +26,8 @@ nav #wowprogress {
 nav #wowprogress:hover {
   color: #00FFFF;
 }
+
+#App-logo {
+  height: 20px;
+  width: auto;
+}
