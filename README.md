@@ -1,6 +1,6 @@
 # Website for a WoW guild Currently Unnamed on Tarren Mill server.
 
-[![CU Website Demo](https://s8.gifyu.com/images/CU-Website-Demo.gif)](https://gifyu.com/image/8Lod)
+[![CU Website Demo](https://s8.gifyu.com/images/CU-Website-Demobae8fc9da5013c71.gif)](https://gifyu.com/image/8LGu)
 
 In the project directory, you can run:
 
