@@ -1,5 +1,7 @@
 # Website for a WoW guild Currently Unnamed on Tarren Mill server.
 
+[![CU Website Demo](https://s8.gifyu.com/images/CU-Website-Demo.gif)](https://gifyu.com/image/8Lod)
+
 In the project directory, you can run:
 
 ### `npm start`
