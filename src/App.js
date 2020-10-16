@@ -6,9 +6,11 @@ import Article from './components/Article/Article.js';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Intro />
+    <div>
+      <div id="wrapper">
+        <NavBar />
+        <Intro />
+      </div>
       <Article video="https://www.youtube.com/embed/Vdre3Tx10MA" />
       <Article video="https://www.youtube.com/embed/HlCWhtmQPvo" />
     </div>
