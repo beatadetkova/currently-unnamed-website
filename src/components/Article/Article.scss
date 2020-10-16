@@ -1,7 +1,22 @@
 .Article {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  color: white;
   margin: 50px 100px;
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    --frame-width: 309px;
+    --frame-height: 174px;
+    width: var(--frame-width);
+    height: var(--frame-height);
+    iframe {
+      width: var(--frame-width);
+      height: var(--frame-height);
+    }
+  }
 }
