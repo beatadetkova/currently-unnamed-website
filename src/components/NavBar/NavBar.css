@@ -14,7 +14,7 @@ nav .link {
   font-size: var(--base-font-size);
 }
 nav .link:hover {
-  color: #00FFFF;
+  color: #00cfff;
 }
 nav .custom-logo {
   width: 40px;
