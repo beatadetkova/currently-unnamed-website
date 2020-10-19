@@ -1,19 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/NavBar/NavBar.js';
-import Intro from './components/Intro/Intro.js';
-import Article from './components/Article/Article.js';
+import Home from './components/Home/Home.js';
+import Apply from './components/Apply/Apply.js';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
-    <div>
-      <div id="wrapper">
+    <Router>
+      <div>
         <NavBar />
-        <Intro />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/apply" component={Apply} />
+        </Switch>
       </div>
-      <Article video="https://www.youtube.com/embed/Vdre3Tx10MA" />
-      <Article video="https://www.youtube.com/embed/HlCWhtmQPvo" />
-    </div>
+    </Router>
   );
 }
 
