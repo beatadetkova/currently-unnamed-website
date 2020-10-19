@@ -4,23 +4,18 @@ import './NavBar.css';
 import wa from './wa-logo.png';
 import wow from './wow-logo.png';
 import rio from './rio-logo.png';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
     <div className="App">
       <nav>
-        <a href={window.location.origin} className="custom-logo" rel="home">
+        <Link to="/" className="custom-logo">
           <img src={logo} id="App-logo" alt="logo" height="50px" />
-        </a>
-        <a
-          className="link"
-          id="Apply-link"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfTidi7OwYKxhcOY1kHwwInDZx2XfHFXK_DPwN5Iyt1aszn4w/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </Link>
+        <Link className="link" id="Apply-link" to="/apply">
           Apply
-        </a>
+        </Link>
         <div>
           <a
             className="link"
