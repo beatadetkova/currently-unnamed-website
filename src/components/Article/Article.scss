@@ -1,22 +1,60 @@
+@use '../../mixins.scss';
+
 .Article {
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   color: white;
-  margin: 50px 100px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 10px;
+  padding: 15px;
+  #content {
+    *:not(h1) {
+      @include mixins.phone-only {
+        font-size: 8px;
+      }
+    }
+    h1 {
+      margin: 0px 0px 20px 0px;
+      @include mixins.phone-only {
+        font-size: 16px;
+        margin: 0px 0px 10px 0px;
+      }
+    }
+  }
   #loader {
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: end;
     margin-right: 10px;
-    --frame-width: 309px;
-    --frame-height: 174px;
+    --frame-width: 618px;
+    --frame-height: 348px;
+    @include mixins.phone-only {
+      --frame-width: 206px;
+      --frame-height: 116px;
+    }
     width: var(--frame-width);
     height: var(--frame-height);
+    .container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+    }
     iframe {
-      width: var(--frame-width);
-      height: var(--frame-height);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      // width: var(--frame-width);
+      // height: var(--frame-height);
     }
   }
 }
