@@ -51,19 +51,17 @@ function Article({ video, children, title }) {
         <div className={showVideo ? 'hidden' : ''}>
           <Spinner />
         </div>
-        <div className="container">
-          <iframe
-            className={showVideo ? '' : 'hidden'}
-            onLoad={loadHandler}
-            title="youtube-video"
-            width="618"
-            height="347.5"
-            src={videoSrc}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
+        <iframe
+          className={showVideo ? '' : 'hidden'}
+          onLoad={loadHandler}
+          title="youtube-video"
+          width="618"
+          height="347.5"
+          src={videoSrc}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
       <div id="content">
         <h1>{title}</h1>
