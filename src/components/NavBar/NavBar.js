@@ -10,8 +10,8 @@ function NavBar() {
   return (
     <div className="App">
       <nav>
-        <Link to="/" className="custom-logo">
-          <img src={logo} id="App-logo" alt="logo" height="50px" />
+        <Link to="/" className="app-logo">
+          <img src={logo} className="app-logo" alt="logo" />
         </Link>
         <Link className="link" id="Apply-link" to="/apply">
           Apply
@@ -31,7 +31,7 @@ function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={wa} className="WoW-logo" alt="logo" height="50px" />
+            <img src={wa} className="logo-link" alt="logo" />
           </a>
           <a
             className="logo-link"
@@ -39,7 +39,7 @@ function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={wow} className="WoW-logo" alt="logo" height="50px" />
+            <img src={wow} className="logo-link" alt="logo" />
           </a>
           <a
             className="logo-link"
@@ -47,7 +47,7 @@ function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={rio} className="WoW-logo" alt="logo" height="50px" />
+            <img src={rio} className="logo-link" alt="logo" />
           </a>
         </div>
       </nav>

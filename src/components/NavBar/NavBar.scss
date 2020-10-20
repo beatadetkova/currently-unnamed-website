@@ -1,4 +1,10 @@
+@use '../../mixins.scss';
+
 nav {
+  --icon-size: 20px;
+  @include mixins.phone-only {
+    --icon-size: 10px;
+  }
   background-color: #282c34;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,12 +22,9 @@ nav {
       color: #00cfff;
     }
   }
-  .custom-logo {
-    width: 40px;
-  }
-  #App-logo {
+  .app-logo {
     height: auto;
-    width: 40px;
+    width: calc(var(--icon-size) * 2);
   }
   #Apply-link {
     justify-self: center;
@@ -38,12 +41,8 @@ nav {
     justify-content: flex-end;
     align-items: center;
     .logo-link {
-      height: 20px;
-      width: 20px;
-    }
-    .WoW-logo {
-      height: 20px;
-      width: 20px;
+      height: var(--icon-size);
+      width: var(--icon-size);
     }
   }
 }
