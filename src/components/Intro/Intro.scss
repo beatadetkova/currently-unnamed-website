@@ -1,7 +1,7 @@
 #intro {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 94vh;
   #guild-name {
@@ -10,8 +10,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    // width: 100%;
-    margin: 5% 20% 5% 20%;
+    margin: 8% 20%;
     * {
       text-align: center;
     }
