@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Article.css';
 import Spinner from './Spinner.js';
 
-function Article({ video }) {
+function Article({ video, children, title }) {
   const [videoSrc, setVideoSrc] = useState('');
   const [articleRef, setArticleRef] = useState();
   const [showVideo, setShowVideo] = useState(false);
@@ -51,19 +51,24 @@ function Article({ video }) {
         <div className={showVideo ? 'hidden' : ''}>
           <Spinner />
         </div>
-        <iframe
-          className={showVideo ? '' : 'hidden'}
-          onLoad={loadHandler}
-          title="youtube-video"
-          width="618"
-          height="347.5"
-          src={videoSrc}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="container">
+          <iframe
+            className={showVideo ? '' : 'hidden'}
+            onLoad={loadHandler}
+            title="youtube-video"
+            width="618"
+            height="347.5"
+            src={videoSrc}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
-      <p>Some text to display</p>
+      <div id="content">
+        <h1>{title}</h1>
+        <div>{children}</div>
+      </div>
     </div>
   );
 }
