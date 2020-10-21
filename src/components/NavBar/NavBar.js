@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './CU-logo.png';
 import './NavBar.css';
-import wa from './wa-logo.png';
+import wl from './wl-logo.png';
 import wow from './wow-logo.png';
 import rio from './rio-logo.png';
 import { Link } from 'react-router-dom';
@@ -31,7 +31,7 @@ function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={wa} className="logo-link" alt="logo" />
+            <img src={wl} className="logo-link" alt="logo" />
           </a>
           <a
             className="logo-link"
