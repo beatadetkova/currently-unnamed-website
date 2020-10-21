@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    margin: 8% 20%;
+    margin: 6% 20%;
     * {
       text-align: center;
     }
@@ -22,7 +22,21 @@
       font-size: 13px;
     }
   }
-  
+  .contact-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    .contact-logo {
+      width: 12px;
+      height: 12px;
+      margin: 0px 5px;
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
   section {
     margin: 0 15%;
     display: flex;
@@ -33,6 +47,9 @@
     color: white;
     p {
       margin: 8px;
+    }
+    label {
+      margin-top: 20px;
     }
   }
 }
