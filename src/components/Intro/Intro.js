@@ -3,6 +3,26 @@ import './Intro.css';
 import discord from './discord-logo.png';
 import battlenet from './battle-net-logo.png';
 
+const ContactInfo = ({ name, discordID, battleTag }) => {
+  return (
+    <div className="contact-info">
+      <div>{name}:</div>
+      <div>
+        <span className="contact-logo">
+          <img src={discord} alt="discord" />
+        </span>
+        {discordID}
+      </div>
+      <div>
+        <span className="contact-logo">
+          <img src={battlenet} alt="Battle-net" />
+        </span>
+        {battleTag}
+      </div>
+    </div>
+  );
+};
+
 function Intro() {
   return (
     <div id="intro">
@@ -20,53 +40,21 @@ function Intro() {
             relaxed schedule, aiming to hit rank 500 in the first tier.
           </p>
           <p>If you are interested send a message to one of our officers!</p>
-          <p>
-            Deamonized (GM): &nbsp;
-            <img
-              src={discord}
-              className="Discord-logo"
-              alt="discord"
-              height="12px"
-            />
-            Deamonized#5170 &nbsp;
-            <img
-              src={battlenet}
-              className="Battle-net-logo"
-              alt="Battle-net"
-              height="12px"
-            />
-            Deamonized#2416 <br />
-            Base: &nbsp;
-            <img
-              src={discord}
-              className="Discord-logo"
-              alt="discord"
-              height="12px"
-            />
-            Baseless#4255 &nbsp;
-            <img
-              src={battlenet}
-              className="Battle-net-logo"
-              alt="Battle-net"
-              height="12px"
-            />
-            Baseless#2713 <br />
-            Inspired: &nbsp;
-            <img
-              src={discord}
-              className="Discord-logo"
-              alt="discord"
-              height="12px"
-            />
-            Inspired#0001 &nbsp;
-            <img
-              src={battlenet}
-              className="Battle-net-logo"
-              alt="Battle-net"
-              height="12px"
-            />
-            Inspired#21448
-          </p>
+          <ContactInfo
+            name="Deamonized (GM)"
+            discordID="Deamonized#5170"
+            battleTag="Deamonized#2416"
+          />
+          <ContactInfo
+            name="Base"
+            discordID="Baseless#4255"
+            battleTag="Baseless#2713"
+          />
+          <ContactInfo
+            name="Inspired"
+            discordID="Inspired#0001"
+            battleTag="Inspired#21448"
+          />
           <label>Raid days are (server time):</label>
           <ul>
             <li>Wednesday 20:00 - 23:30 </li>
