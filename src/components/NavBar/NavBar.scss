@@ -13,13 +13,12 @@ nav {
   width: calc(100% - 20px);
   height: 6vh;
   padding: 0 10px;
-  color: white;
   .link {
     transition: color 1s ease-out;
     font-weight: bold;
     font-size: var(--base-font-size);
     &:hover {
-      color: #00cfff;
+      color: var(--logo-color);
     }
   }
   .app-logo {
@@ -32,7 +31,7 @@ nav {
   a {
     display:flex;
     margin: 0 8px;
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     cursor: pointer;
   }
