@@ -1,6 +1,8 @@
 @use 'mixins';
 
 :root {
+  --text-color: #F8F8FF;
+  --logo-color: #00cfff;
   --base-font-size: 16px;
   @include mixins.phone-only {
     --base-font-size: 8px;

@@ -1,4 +1,6 @@
 :root {
+  --text-color: #F8F8FF;
+  --logo-color: #00cfff;
   --base-font-size: 16px;
 }
 @media only screen and (max-width: 599px) {
