@@ -7,10 +7,11 @@ function Home() {
     <div>
       <Intro />
       <Article
-        video="https://www.youtube.com/embed/Vdre3Tx10MA"
-        title="Castle Nathria"
+        video="https://www.youtube.com/embed/SM90NNF3oMw"
+        title="Castle Nathria (soon&trade;)"
       >
-        <p>Pull count:</p>
+        <p>We will be back with our kill videos!</p>
+        {/* <p>Pull count:</p>
         <ul>
           <li>Shriekwing</li>
           <li>Altimor the Huntsman: 1</li>
@@ -22,7 +23,7 @@ function Home() {
           <li>Sludgefist: 1</li>
           <li>Stoneborne Generals: 1</li>
           <li>Sire Denathrius: 1</li>
-        </ul>
+        </ul> */}
       </Article>
       <Article
         video="https://www.youtube.com/embed/HlCWhtmQPvo"
