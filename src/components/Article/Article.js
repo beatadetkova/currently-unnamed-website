@@ -6,6 +6,7 @@ function Article({ video, children, title }) {
   const [videoSrc, setVideoSrc] = useState('');
   const [articleRef, setArticleRef] = useState();
   const [showVideo, setShowVideo] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     let observer;
@@ -45,6 +46,10 @@ function Article({ video, children, title }) {
     }
   }
 
+  function expandContent() {
+    setIsExpanded(!isExpanded);
+  }
+
   return (
     <div className="Article" ref={setArticleRef}>
       <div id="loader">
@@ -65,7 +70,12 @@ function Article({ video, children, title }) {
       </div>
       <div id="content">
         <h1>{title}</h1>
-        <div>{children}</div>
+        <div onClick={expandContent}>
+          <div id="text-content" className={isExpanded ? 'expanded' : ''}>
+            {children}
+          </div>
+          <div id="expand-info">Show {isExpanded ? 'less' : 'more'}</div>
+        </div>
       </div>
     </div>
   );
