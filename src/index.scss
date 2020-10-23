@@ -3,9 +3,24 @@
 :root {
   --text-color: #F8F8FF;
   --logo-color: #00cfff;
-  --base-font-size: 16px;
+  --icon-size: 20px;
+  --text-shadow:
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
   @include mixins.phone-only {
-    --base-font-size: 8px;
+    --base-font-size: 10px;
+    --icon-size: 12px;
+  }
+  @include mixins.tablet-portrait-up {
+    --base-font-size: 12px;
+  }
+  @include mixins.tablet-landscape-up {
+    --base-font-size: 14px;
+  }
+  @include mixins.desktop-up {
+    --base-font-size: 16px;
   }
 }
 

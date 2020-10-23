@@ -3,7 +3,8 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  min-height: 94vh;
+  min-height: calc(100vh - var(--icon-size) - 2 * 13px);
+  --text-font-size: calc(var(--base-font-size)*1.5);
   #guild-name {
     display: flex;
     flex-flow: column nowrap;
@@ -16,10 +17,13 @@
     }
     h1 {
       font-weight: bold;
-      font-size: 25px;
+      font-size: calc(var(--base-font-size)*3);
+      color: var(--logo-color);
+      text-shadow: var(--text-shadow);
     }
     h2 {
-      font-size: 13px;
+      font-size: calc(var(--base-font-size)*2);
+      text-shadow: var(--text-shadow);
     }
   }
   .contact-info {
@@ -27,13 +31,20 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    .contact-logo {
-      width: 12px;
-      height: 12px;
+    margin: 3px 0;
+    .social-contact {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      width: var(--text-font-size);
+      height: var(--text-font-size);
       margin: 0px 5px;
       img {
-        width: 12px;
-        height: 12px;
+        width: var(--text-font-size);
+        height: var(--text-font-size);
       }
     }
   }
@@ -45,6 +56,8 @@
     align-items: center;
     text-align: center;
     color: var(--text-color);
+    font-size: var(--text-font-size);
+    text-shadow: var(--text-shadow);
     p {
       margin: 8px;
     }

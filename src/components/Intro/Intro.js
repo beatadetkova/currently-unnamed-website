@@ -7,17 +7,17 @@ const ContactInfo = ({ name, discordID, battleTag }) => {
   return (
     <div className="contact-info">
       <div>{name}:</div>
-      <div>
-        <span className="contact-logo">
+      <div className="social-contact">
+        <div className="logo">
           <img src={discord} alt="discord" />
-        </span>
-        {discordID}
+        </div>
+        <div>{discordID}</div>
       </div>
-      <div>
-        <span className="contact-logo">
+      <div className="social-contact">
+        <div className="logo">
           <img src={battlenet} alt="Battle-net" />
-        </span>
-        {battleTag}
+        </div>
+        <div>{battleTag}</div>
       </div>
     </div>
   );

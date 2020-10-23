@@ -1,22 +1,17 @@
 @use '../../mixins.scss';
 
 nav {
-  --icon-size: 20px;
-  @include mixins.phone-only {
-    --icon-size: 10px;
-  }
   background-color: #282c34;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 6vh;
+  grid-template-rows: auto;
   align-items: center;
   width: calc(100% - 20px);
-  height: 6vh;
-  padding: 0 10px;
+  padding: 13px 10px;
   .link {
     transition: color 1s ease-out;
     font-weight: bold;
-    font-size: var(--base-font-size);
+    font-size: var(--icon-size);
     &:hover {
       color: var(--logo-color);
     }
@@ -32,6 +27,7 @@ nav {
     display:flex;
     margin: 0 8px;
     color: var(--text-color);
+    text-shadow: var(--text-shadow);
     text-decoration: none;
     cursor: pointer;
   }

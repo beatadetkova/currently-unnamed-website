@@ -7,6 +7,7 @@
   justify-content: center;
   align-content: center;
   color: var(--text-color);
+  text-shadow: var(--text-shadow);
   box-sizing: border-box;
   width: 100%;
   border: 10px;
@@ -20,16 +21,18 @@
     --frame-width: 206px;
     --frame-height: 116px;
   }
+  @include mixins.tablet-portrait-up {
+    --frame-width: 412px;
+    --frame-height: 232px;
+  }
   #content {
     *:not(h1) {
-      @include mixins.phone-only {
-        font-size: 10px;
-      }
+      font-size: var(--base-font-size);
     }
     h1 {
       margin: 0px 0px 20px 0px;
+      font-size: calc(var(--base-font-size)*2);
       @include mixins.phone-only {
-        font-size: 16px;
         margin: 10px 0px 5px 0px;
       }
     }
