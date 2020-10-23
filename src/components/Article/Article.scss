@@ -37,6 +37,9 @@
       }
     }
     #text-content {
+      div {
+        display: inline-block;
+      }
       @include mixins.phone-only {
         height: 55px;
         overflow-y: hidden;
