@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Article.css';
 import Spinner from './Spinner.js';
 
@@ -7,8 +7,15 @@ function Article({ video, children, title }) {
   const [articleRef, setArticleRef] = useState();
   const [showVideo, setShowVideo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [windowWidth, setwindowWidth] = useState(0);
+
+  const updateWidthCb = useCallback(updateWidth);
 
   useEffect(() => {
+    // calculate window width
+    updateWidthCb();
+    window.addEventListener('resize', updateWidthCb);
+    // handling article intersection
     let observer;
     let didCancel = false;
 
@@ -33,12 +40,19 @@ function Article({ video, children, title }) {
       }
     }
     return () => {
+      // remove event listener for window resizing
+      window.removeEventListener('resize', updateWidthCb);
+      // stop observing intersection
       didCancel = true;
       if (observer && observer.unobserve) {
         observer.unobserve(articleRef);
       }
     };
-  }, [video, videoSrc, articleRef]);
+  }, [video, videoSrc, articleRef, updateWidthCb]);
+
+  function updateWidth() {
+    setwindowWidth(window.innerWidth);
+  }
 
   function loadHandler() {
     if (videoSrc.length > 0) {
@@ -74,7 +88,9 @@ function Article({ video, children, title }) {
           <div id="text-content" className={isExpanded ? 'expanded' : ''}>
             {children}
           </div>
-          <div id="expand-info">Show {isExpanded ? 'less' : 'more'}</div>
+          <div id="expand-info">
+            {windowWidth < 600 ? `Show ${isExpanded ? 'less' : 'more'}` : ''}
+          </div>
         </div>
       </div>
     </div>
