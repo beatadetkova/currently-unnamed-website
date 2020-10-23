@@ -6,23 +6,46 @@
   grid-template-rows: auto;
   justify-content: center;
   align-content: center;
-  color: white;
+  color: var(--text-color);
   box-sizing: border-box;
   width: 100%;
   border: 10px;
   padding: 15px;
+  --frame-width: 618px;
+  --frame-height: 348px;
+  @include mixins.phone-only {
+    grid-template-columns: auto;
+    grid-template-rows: var(--frame-height) auto;
+    padding: 10px;
+    --frame-width: 206px;
+    --frame-height: 116px;
+  }
   #content {
     *:not(h1) {
       @include mixins.phone-only {
-        font-size: 8px;
+        font-size: 10px;
       }
     }
     h1 {
       margin: 0px 0px 20px 0px;
       @include mixins.phone-only {
         font-size: 16px;
-        margin: 0px 0px 10px 0px;
+        margin: 10px 0px 5px 0px;
       }
+    }
+    #text-content {
+      @include mixins.phone-only {
+        height: 55px;
+        overflow-y: hidden;
+      }
+      &.expanded {
+        height: unset;
+      }
+    }
+    #expand-info {
+      font-weight: bold;
+      margin: 5px;
+      color: var(--logo-color);
     }
   }
   #loader {
@@ -31,12 +54,6 @@
     align-items: center;
     justify-self: end;
     margin-right: 10px;
-    --frame-width: 618px;
-    --frame-height: 348px;
-    @include mixins.phone-only {
-      --frame-width: 206px;
-      --frame-height: 116px;
-    }
     width: var(--frame-width);
     height: var(--frame-height);
     iframe {
