@@ -75,8 +75,6 @@ function Article({ video, children, title }) {
           className={showVideo ? '' : 'hidden'}
           onLoad={loadHandler}
           title="youtube-video"
-          width="618"
-          height="347.5"
           src={videoSrc}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
