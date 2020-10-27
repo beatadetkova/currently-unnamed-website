@@ -10,8 +10,6 @@
   width: 100%;
   border: 10px;
   padding: 15px;
-  --frame-width: 618px;
-  --frame-height: 348px;
 }
 @media only screen and (max-width: 599px) {
   .Article {
@@ -26,6 +24,12 @@
   .Article {
     --frame-width: 412px;
     --frame-height: 232px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .Article {
+    --frame-width: 618px;
+    --frame-height: 348px;
   }
 }
 .Article #content *:not(h1) {

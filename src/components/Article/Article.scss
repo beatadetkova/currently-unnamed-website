@@ -12,8 +12,6 @@
   width: 100%;
   border: 10px;
   padding: 15px;
-  --frame-width: 618px;
-  --frame-height: 348px;
   @include mixins.phone-only {
     grid-template-columns: auto;
     grid-template-rows: var(--frame-height) auto;
@@ -24,6 +22,10 @@
   @include mixins.tablet-portrait-up {
     --frame-width: 412px;
     --frame-height: 232px;
+  }
+  @include mixins.desktop-up {
+    --frame-width: 618px;
+    --frame-height: 348px;
   }
   #content {
     *:not(h1) {
