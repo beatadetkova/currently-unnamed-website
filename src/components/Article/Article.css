@@ -9,7 +9,7 @@
   box-sizing: border-box;
   width: 100%;
   border: 10px;
-  padding: 15px;
+  padding: 15px 15px 45px 15px;
 }
 @media only screen and (max-width: 599px) {
   .Article {
@@ -35,6 +35,11 @@
 .Article #content *:not(h1) {
   font-size: var(--base-font-size);
 }
+@media only screen and (max-width: 599px) {
+  .Article #content *:not(h1) {
+    font-size: calc(var(--base-font-size)*1.2);
+  }
+}
 .Article #content h1 {
   margin: 0px 0px 20px 0px;
   font-size: calc(var(--base-font-size)*2);
@@ -42,6 +47,7 @@
 @media only screen and (max-width: 599px) {
   .Article #content h1 {
     margin: 10px 0px 5px 0px;
+    font-size: calc(var(--base-font-size)*1.5);
   }
 }
 .Article #content #text-content div {
@@ -49,7 +55,7 @@
 }
 @media only screen and (max-width: 599px) {
   .Article #content #text-content {
-    height: 55px;
+    height: 53px;
     overflow-y: hidden;
   }
 }
@@ -58,7 +64,7 @@
 }
 .Article #content #expand-info {
   font-weight: bold;
-  margin: 5px;
+  margin: 5px 0;
   color: var(--logo-color);
 }
 .Article #loader {
@@ -66,9 +72,14 @@
   justify-content: center;
   align-items: center;
   justify-self: end;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
   width: var(--frame-width);
   height: var(--frame-height);
+}
+@media only screen and (max-width: 599px) {
+  .Article #loader {
+    margin: 0 0 10px 0;
+  }
 }
 .Article #loader iframe {
   width: var(--frame-width);

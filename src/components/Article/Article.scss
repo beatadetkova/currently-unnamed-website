@@ -11,7 +11,7 @@
   box-sizing: border-box;
   width: 100%;
   border: 10px;
-  padding: 15px;
+  padding: 15px 15px 45px 15px;
   @include mixins.phone-only {
     grid-template-columns: auto;
     grid-template-rows: var(--frame-height) auto;
@@ -30,12 +30,16 @@
   #content {
     *:not(h1) {
       font-size: var(--base-font-size);
+      @include mixins.phone-only {
+        font-size: calc(var(--base-font-size)*1.2);
+      }
     }
     h1 {
       margin: 0px 0px 20px 0px;
       font-size: calc(var(--base-font-size)*2);
       @include mixins.phone-only {
         margin: 10px 0px 5px 0px;
+        font-size: calc(var(--base-font-size)*1.5);
       }
     }
     #text-content {
@@ -43,7 +47,7 @@
         display: inline-block;
       }
       @include mixins.phone-only {
-        height: 55px;
+        height: 53px;
         overflow-y: hidden;
       }
       &.expanded {
@@ -52,7 +56,7 @@
     }
     #expand-info {
       font-weight: bold;
-      margin: 5px;
+      margin: 5px 0;
       color: var(--logo-color);
     }
   }
@@ -61,7 +65,10 @@
     justify-content: center;
     align-items: center;
     justify-self: end;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
+    @include mixins.phone-only {
+      margin: 0 0 10px 0;
+    }
     width: var(--frame-width);
     height: var(--frame-height);
     iframe {
