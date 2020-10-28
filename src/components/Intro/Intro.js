@@ -55,6 +55,11 @@ function Intro() {
             discordID="Inspired#0001"
             battleTag="Inspired#21448"
           />
+          <ContactInfo
+            name="Squibbs"
+            discordID="Squibbss#2831"
+            battleTag="Squiggles#2132"
+          />
           <label>Raid days are (server time):</label>
           <ul>
             <li>Wednesday 20:00 - 23:30 </li>
