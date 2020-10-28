@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Article.css';
 import Spinner from './Spinner.js';
 
@@ -8,59 +8,49 @@ function Article({ video, children, title }) {
   const [contentRef, setContentRef] = useState();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [windowWidth, setwindowWidth] = useState(0);
-
-  const updateWidthCb = useCallback(updateWidth);
+  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // calculate window width
-    updateWidthCb();
-    window.addEventListener('resize', updateWidthCb);
-    // handling article intersection
-    let observer;
-    let didCancel = false;
-
-    if (articleRef && videoSrc !== video) {
-      if (IntersectionObserver) {
-        observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!didCancel && entry.isIntersecting) {
-                setVideoSrc(video);
-                observer.unobserve(articleRef);
-              }
-            });
-          },
-          {
-            threshold: 0.01,
-          }
-        );
-        observer.observe(articleRef);
-      } else {
-        setVideoSrc(video);
-      }
+    if (
+      !IntersectionObserver ||
+      !IntersectionObserver.prototype.observe ||
+      !IntersectionObserver.prototype.unobserve
+    ) {
+      setVideoSrc(video);
+      return () => {};
     }
-    return () => {
-      // remove event listener for window resizing
-      window.removeEventListener('resize', updateWidthCb);
-      // stop observing intersection
-      didCancel = true;
-      if (observer && observer.unobserve) {
+    if (articleRef) {
+      let didCancel = false;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (!didCancel && entry.isIntersecting) {
+              setVideoSrc(video);
+              observer.unobserve(articleRef);
+            }
+          }
+        },
+        { threshold: 0.01 }
+      );
+      observer.observe(articleRef);
+      return () => {
+        // stop observing intersection
+        didCancel = true;
         observer.unobserve(articleRef);
-      }
+      };
+    }
+  }, [video, articleRef]);
+
+  useEffect(() => {
+    //handling resizing
+    const resizeHandler = (e) => {
+      setwindowWidth(window.innerWidth);
     };
-  }, [video, videoSrc, articleRef, updateWidthCb]);
-
-  // useEffect(() => {
-
-  //   return () => {
-
-  //   }
-  // })
-
-  function updateWidth() {
-    setwindowWidth(window.innerWidth);
-  }
+    window.addEventListener('resize', resizeHandler);
+    return () => {
+      window.removeEventListener('resize', resizeHandler);
+    };
+  }, []);
 
   function loadHandler() {
     setIsVideoLoaded(true);
@@ -85,14 +75,6 @@ function Article({ video, children, title }) {
             allowFullScreen
           ></iframe>
         )}
-        {/* <iframe
-          onLoad={loadHandler}
-          title="youtube-video"
-          src={videoSrc}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe> */}
       </div>
       <div id="content">
         <h1>{title}</h1>
