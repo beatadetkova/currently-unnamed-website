@@ -1,13 +1,21 @@
-# Website for a WoW guild Currently Unnamed on Tarren Mill server.
+# :question: What is this repository?
 
-[![CU Website Demo](https://s8.gifyu.com/images/CU-Website-Demobae8fc9da5013c71.gif)](https://gifyu.com/image/8LGu)
+A website for a _World of Warcraft_ guild called _Currently Unnamed_ on the _Tarren Mill_ server.
 
-In the project directory, you can run:
+It is designed to be a **fully responsive** Single Page Application (**SPA**) which will **lazy load** heavy assets (videos).
 
-### `npm start`
+This application has been built using _React_ in combination with _Sass_ and automatically deployed via _GitHub Actions_.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# :eyes: Where can I see this website?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As of now it is hosted on [GitHub Pages](https://beatadetkova.github.io/currently-unnamed-website/). In the near future the website will be moved to _AWS_ with a custom domain.
+
+# :nerd_face: I am developer, how can I play with your website?
+
+Feel free to [clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository on your machine.
+
+You can then run `npm i` and `npm start` in your favorite terminal inside of the freshly cloned repository.
+
+This will start a development server available at [http://localhost:3000](http://localhost:3000) (except if the port is already taken, in which case it'll ask for confirmation to ue another one).
+
+The page will reload if you make any edits and also show you any error it may have encountered while running/building.
