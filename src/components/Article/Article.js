@@ -6,7 +6,7 @@ function Article({ video, children, title }) {
   const [videoSrc, setVideoSrc] = useState('');
   const [articleRef, setArticleRef] = useState();
   const [contentRef, setContentRef] = useState();
-  const [showVideo, setShowVideo] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [windowWidth, setwindowWidth] = useState(0);
 
@@ -51,14 +51,19 @@ function Article({ video, children, title }) {
     };
   }, [video, videoSrc, articleRef, updateWidthCb]);
 
+  // useEffect(() => {
+
+  //   return () => {
+
+  //   }
+  // })
+
   function updateWidth() {
     setwindowWidth(window.innerWidth);
   }
 
   function loadHandler() {
-    if (videoSrc.length > 0) {
-      setShowVideo(!showVideo);
-    }
+    setIsVideoLoaded(true);
   }
 
   function expandContent() {
@@ -68,18 +73,26 @@ function Article({ video, children, title }) {
   return (
     <div className="Article" ref={setArticleRef}>
       <div id="loader">
-        <div className={showVideo ? 'hidden' : ''}>
-          <Spinner />
-        </div>
-        <iframe
-          className={showVideo ? '' : 'hidden'}
+        {!isVideoLoaded && <Spinner />}
+        {videoSrc.length > 0 && (
+          <iframe
+            onLoad={loadHandler}
+            className={!isVideoLoaded ? 'hidden' : ''}
+            title="youtube-video"
+            src={videoSrc}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        )}
+        {/* <iframe
           onLoad={loadHandler}
           title="youtube-video"
           src={videoSrc}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        ></iframe> */}
       </div>
       <div id="content">
         <h1>{title}</h1>
