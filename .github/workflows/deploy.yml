@@ -1,0 +1,28 @@
+name: deploy
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm i
+    - name: Build
+      run: npm run build
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: build
+        author: Beata Detkova <beata.detkova.jr@gmail.com>
+        committer: Beata Detkova <beata.detkova.jr@gmail.com>
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
