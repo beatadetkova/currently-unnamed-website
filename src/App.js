@@ -5,14 +5,16 @@ import Home from './components/Home/Home.js';
 import Apply from './components/Apply/Apply.js';
 import NavBar from './components/NavBar/NavBar';
 
+const basePath = process.env.BASE_PATH;
+
 function App() {
   return (
     <Router>
       <div>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/apply" component={Apply} />
+          <Route exact path={basePath + '/'} component={Home} />
+          <Route exact path={basePath + '/apply'} component={Apply} />
         </Switch>
       </div>
     </Router>
