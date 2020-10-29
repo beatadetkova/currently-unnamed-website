@@ -17,7 +17,7 @@ jobs:
     - name: Build
       run: npm run build
       env:
-        BASE_PATH: /currently-unnamed-website
+        BASE_NAME: /currently-unnamed-website
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
