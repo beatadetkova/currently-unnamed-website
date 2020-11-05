@@ -12,9 +12,9 @@ function Article({ video, children, title }) {
 
   useEffect(() => {
     if (
-      !IntersectionObserver ||
-      !IntersectionObserver.prototype.observe ||
-      !IntersectionObserver.prototype.unobserve
+      !window.IntersectionObserver ||
+      !window.IntersectionObserver.prototype.observe ||
+      !window.IntersectionObserver.prototype.unobserve
     ) {
       setVideoSrc(video);
       return () => {};
