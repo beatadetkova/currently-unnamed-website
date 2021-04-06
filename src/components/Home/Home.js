@@ -8,41 +8,23 @@ function Home() {
       <Intro />
       <Article
         video="https://www.youtube.com/embed/SM90NNF3oMw"
-        title="Castle Nathria (soon&trade;)"
-      >
-        <p>We will be back with our kill videos!</p>
-        <p>Pull count:</p>
-        <ul>
-          <li>Shriekwing: 0</li>
-          <li>Altimor the Huntsman: 0</li>
-          <li>Hungering Destroyer: 0</li>
-          <li>Artificer Xy'Mox: 0</li>
-          <li>Sun King's Salvation: 0</li>
-          <li>Lady Inerva Darkvein: 0</li>
-          <li>The Council of Blood: 0</li>
-          <li>Sludgefist: 0</li>
-          <li>Stoneborne Generals: 0</li>
-          <li>Sire Denathrius: 0</li>
-        </ul>
-      </Article>
-      {/* <Article
-        video="https://www.youtube.com/embed/HlCWhtmQPvo"
         title="Castle Nathria"
       >
+        <p>We will be back with our kill videos soon!</p>
         <p>Pull count:</p>
         <ul>
-          <li>Shriekwing:1 </li>
-          <li>Altimor the Huntsman: 1</li>
-          <li>Hungering Destroyer: 1</li>
-          <li>Artificer Xy'Mox: 1</li>
-          <li>Sun King's Salvation: 1</li>
-          <li>Lady Inerva Darkvein: 1</li>
-          <li>The Council of Blood: 1</li>
-          <li>Sludgefist: 1</li>
-          <li>Stoneborne Generals: 1</li>
-          <li>Sire Denathrius: 1</li>
+          <li>Shriekwing: 8</li>
+          <li>Altimor the Huntsman: 14</li>
+          <li>Hungering Destroyer: 28</li>
+          <li>Artificer Xy'Mox: 50</li>
+          <li>Sun King's Salvation: 47</li>
+          <li>Lady Inerva Darkvein: 75</li>
+          <li>The Council of Blood: 71</li>
+          <li>Sludgefist: 127</li>
+          <li>Stoneborne Generals: 180</li>
+          <li>Sire Denathrius: ?</li>
         </ul>
-      </Article> */}
+      </Article>
     </div>
   );
 }

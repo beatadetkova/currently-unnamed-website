@@ -46,6 +46,11 @@ function Intro() {
             battleTag="Deamonized#2416"
           />
           <ContactInfo
+            name="Squibbs"
+            discordID="Squibbss#2831"
+            battleTag="Squiggles#2132"
+          />
+          <ContactInfo
             name="Base"
             discordID="Baseless#4255"
             battleTag="Baseless#2713"
@@ -54,11 +59,6 @@ function Intro() {
             name="Inspired"
             discordID="Inspired#0001"
             battleTag="Inspired#21448"
-          />
-          <ContactInfo
-            name="Squibbs"
-            discordID="Squibbss#2831"
-            battleTag="Squiggles#2132"
           />
           <label>Raid days are (server time):</label>
           <ul>
