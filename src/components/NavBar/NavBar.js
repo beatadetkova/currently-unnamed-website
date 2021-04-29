@@ -13,9 +13,7 @@ function NavBar() {
         <Link to="/" className="app-logo">
           <img src={logo} className="app-logo" alt="logo" />
         </Link>
-        <Link className="link" id="Apply-link" to="/apply">
-          Apply
-        </Link>
+        <a href="https://discord.gg/K5jxQMGjMj" className="link" id="Apply-link">Apply</a>
         <div>
           <a
             className="link"

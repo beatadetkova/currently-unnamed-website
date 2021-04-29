@@ -37,9 +37,9 @@ function Intro() {
             new 2 day guild on Tarren Mill made up of a group of progress
             focused, experienced raiders. We are all multi-cutting edge players
             looking to raid at a good standard in Shadowlands but on a more
-            relaxed schedule, aiming to hit rank 500 in the first tier.
+            relaxed schedule, aiming to constantly improve our world ranking.
           </p>
-          <p>If you are interested send a message to one of our officers!</p>
+          <p>If you are interested, join our <a href="https://discord.gg/K5jxQMGjMj">Discord server</a> and head to the #apply channel. If you have any questions feel free to message an officer:</p>
           <ContactInfo
             name="Deamonized (GM)"
             discordID="Deamonized#5170"
